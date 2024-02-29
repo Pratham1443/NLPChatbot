@@ -2,7 +2,7 @@ This is an NLP chatbot that answers science related questions.
 
 T5 model from huggingface is fine-tuned using the SciQ dataset for the question answering task.
 
-Dataset Preparation
+Dataset Preparation:
 Custom ScienceDataset class is created in the ScienceDataset.py file. This class is used to prepare the dataset in the desired format. SciQ dataset is used.
 Original format per sample:
 {question:
@@ -21,7 +21,7 @@ For example,
 {Question: How do plants make food?
 Answer: photosynthesis. Plants make food by photosynthesis.}
 
-Training
+Training:
 T5 model from huggingface transformers library is fine-tuned using the dataset prepared above. 
 Adam optimizer is used to optimize the weights of the model. 
 Learning rate is 1e-5.
@@ -30,7 +30,7 @@ Batch Size is 8.
 After every epoch, a checkpoint (checkpt.pth) is saved containing the model params, optimizer state, current_epoch to resume training from the same point next time.
 Code used to fine-tune can be found in the Train.py file.
 
-Main.py
+Main.py:
 checkpt.pth file is downloaded from google drive using gdown. It could not be uploaded on github due to large size (~2.5 GB)
  transformers and torch libraries are also installed.
 It could not be trained for more than 50 epochs in the given time frame so, the responses of the chatbot are not very well structured and factually correct. 

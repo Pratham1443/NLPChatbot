@@ -2,6 +2,9 @@ This is an NLP chatbot that answers science related questions.
 
 T5 model from huggingface is fine-tuned using the SciQ dataset for the question answering task.
 
+dataset.json is used for training.
+valid.json is used as validation dataset.
+
 Dataset Preparation:
 Custom ScienceDataset class is created in the ScienceDataset.py file. This class is used to prepare the dataset in the desired format. SciQ dataset is used.
 Original format per sample:

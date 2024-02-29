@@ -12,8 +12,22 @@ from openfabric_pysdk.loader import ConfigClass
 
 import subprocess
 
+import os
+import requests
+
+subprocess.call(['pip', 'install', 'gdown'])
+import gdown
+
+# Define the URL of the Google Drive pytorch model and the destination filename
+url = 'https://drive.google.com/uc?id=1QMdkrJbo6AgWj1-KALelWuuskTVfgV7N'
+destination = 'checkpt.pth'  # Specify the desired filename and extension
+
+# Download the pytorch file using gdown
+gdown.download(url, destination, quiet=False)
 subprocess.call(['pip', 'install', 'transformers'])
 subprocess.call(['pip', 'install', 'torch'])
+
+
 
 from transformers import T5Tokenizer, T5Model, T5ForConditionalGeneration, T5TokenizerFast
 from torch.optim import Adam

@@ -6,19 +6,19 @@ Dataset Preparation:
 Custom ScienceDataset class is created in the ScienceDataset.py file. This class is used to prepare the dataset in the desired format. SciQ dataset is used.
 Original format per sample:
 {question:
-Option1:
-Option2:
-Option3:
-Option4:
-Correct option:
+Option1:, 
+Option2:, 
+Option3:, 
+Option4:, 
+Correct option:, 
 Explanation:
 }
 
 Converted format:
-{question:
+{question:, 
 Answer: correct option + ‘.’ + Explanation.}
 For example,
-{Question: How do plants make food?
+{Question: How do plants make food?, 
 Answer: photosynthesis. Plants make food by photosynthesis.}
 
 Training:

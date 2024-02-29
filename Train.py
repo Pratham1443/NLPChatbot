@@ -15,7 +15,7 @@ model = T5ForConditionalGeneration.from_pretrained("t5-base", return_dict=True)
 
 model = model.to(device)
 
-optim = Adam(model.parameters(), lr=1e-3)
+optim = Adam(model.parameters(), lr=1e-5)
 
 def load_checkpt(model, optimizer, chpt_file):
     start_epoch = 0
